@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'prestigeshop',
+    'database_user' => 'root',
+    'database_password' => '',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'saYjqgjJEYpiRWyw7gV4qHThJODbwE2Aaphw9PtHEX942C1EGIeZx5FC6swsfFn0',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2023-10-23',
+    'locale' => 'fr-FR',
+    'use_debug_toolbar' => true,
+    'cookie_key' => '31oF3G6UpRNX4bkpnEeH8oGsfFAikQjzn5JJas9L0h6sSfKwme6QJXs4eNQ5jtw4',
+    'cookie_iv' => 'eVKgjOeoJoLIRI3uvVZeF0Pdtkj15TuZ',
+    'new_cookie_key' => 'def000008208af30444e88b357a76426a87b7363adf213f4f0947518336327b2e8ee5a36e896c171caf8829210bc25525e0ae44008c4fd28b9be45b12c554ae5d6e21a66',
+  ),
+);

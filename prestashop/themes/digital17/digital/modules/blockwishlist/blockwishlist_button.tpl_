@@ -1,0 +1,60 @@
+{*
+* 2007-2022 ETS-Soft
+*
+* NOTICE OF LICENSE
+*
+* This file is not open source! Each license that you purchased is only available for 1 wesite only.
+* If you want to use this file on more websites (or projects), you need to purchase additional licenses. 
+* You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+* 
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs, please contact us for extra customization service at an affordable price
+*
+*  @author ETS-Soft <etssoft.jsc@gmail.com>
+*  @copyright  2007-2022 ETS-Soft
+*  @license    Valid for 1 website (or project) for each purchase of license
+*  International Registered Trademark & Property of ETS-Soft
+*}
+
+{if isset($wishlists) && count($wishlists) > 1}
+    <div class="wishlist">
+    	{foreach name=wl from=$wishlists item=wishlist}
+    		{if $smarty.foreach.wl.first}
+    			<a class="wishlist_button_list" tabindex="0" data-toggle="popover" data-trigger="focus" title="{l s='Wishlist' d='Shop.Theme.Actions'}" data-placement="bottom">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+    			<div class="popover-content" hidden>
+    				<table class="table" border="1">
+    					<tbody>
+    		              {/if}
+                				<tr title="{$wishlist.name}" value="{$wishlist.id_wishlist}" onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', false, 1, '{$wishlist.id_wishlist}');">
+                					<td>
+                						{l s='Add to %s' sprintf=[$wishlist.name] d='Shop.Theme.Actions'}
+                					</td>
+                				</tr>
+            		      {if $smarty.foreach.wl.last}
+    					</tbody>
+    				</table>
+    			</div>
+    		{/if}
+    	{foreachelse}
+    		<a href="#" id="wishlist_button_nopop" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' d='Shop.Theme.Actions'}">
+    			<i class="fa fa-heart-o" aria-hidden="true"></i>
+    		</a>
+    	{/foreach}
+	</div>
+{else}
+    <a title="{l s='Add to Wishlistyy' d='Shop.Theme.Actions'}" class="wishlist addToWishlist wishlistProd_{$product.id_product|intval}" href="#" data-rel="{$product.id_product|intval}" onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', false, 1); return false;"></a>
+{/if}
+
+<input type="hidden" value="{l s='The product was successfully added to your wishlist.'  d='Shop.Theme.Actions'}" class="wl_login"/>
+<input type="hidden" value="{l s='You must be logged in to manage your wishlist.' d='Shop.Theme.Actions'}" class="wl_not_login"/>
+{literal}
+    <script type="text/javascript">
+        var log_in = $('.wl_login').val();
+        var not_log_in = $('.wl_not_login').val();
+    </script>
+{/literal}

@@ -1,0 +1,26 @@
+<?php
+/* Smarty version 4.3.1, created on 2023-10-26 18:19:31
+  from 'module:ps_bannerps_banner.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.1',
+  'unifunc' => 'content_653a9193cb4383_58458194',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '64034093fbda864710a2c0f526b37f921e53ee39' => 
+    array (
+      0 => 'module:ps_bannerps_banner.tpl',
+      1 => 1671890849,
+      2 => 'module',
+    ),
+  ),
+  'cache_lifetime' => 31536000,
+),true)) {
+function content_653a9193cb4383_58458194 (Smarty_Internal_Template $_smarty_tpl) {
+?><a class="banner" href="http://localhost/prestashop/" title="Nous sommes en promo chaque (3) trois mois">
+      <img src="http://localhost/prestashop/modules/ps_banner/img/75e10d405709bd50d766aa0c2c9d794a.webp" alt="Nous sommes en promo chaque (3) trois mois" title="Nous sommes en promo chaque (3) trois mois" class="img-fluid" loading="lazy" width="1110" height="213">
+  </a>
+<?php }
+}
